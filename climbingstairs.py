@@ -1,25 +1,14 @@
-from typing import List
-
 class Solution:
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-        """
-        Do not return anything, modify nums1 in-place instead.
-        """
-        i = m - 1  # Pointer for nums1
-        j = n - 1  # Pointer for nums2
-        k = m + n - 1  # Pointer for placement in nums1
+    def climbStairs(self, n: int) -> int:
+        if n <= 2:
+            return n
 
-        while i >= 0 and j >= 0:
-            if nums1[i] > nums2[j]:
-                nums1[k] = nums1[i]
-                i -= 1
-            else:
-                nums1[k] = nums2[j]
-                j -= 1
-            k -= 1
+        first = 1  # Ways to reach step 1
+        second = 2  # Ways to reach step 2
+
+        for i in range(3, n + 1):
+            third = first + second  # Ways to reach current step
+            first = second
+            second = third
         
-        # Copy any remaining elements from nums2 into nums1
-        while j >= 0:
-            nums1[k] = nums2[j]
-            j -= 1
-            k -= 1
+        return second
