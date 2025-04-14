@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFE EDUCATIONAL AND SKILL Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <h1>SAFE SKILL Academy</h1>
+                <p class="tagline">Empowering minds, shaping futures</p>
+            </div>
+            <nav>
+                <button id="homeBtn" class="active">Home</button>
+                <button id="coursesBtn">Courses</button>
+                <button id="quizBtn">Quiz</button>
+                <button id="resourcesBtn">Resources</button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="homeSection" class="active-section">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h2>WELCOME TO SAFE EDUCATIONAL AND SKILL Academy </h2>
+                        <p>Your journey to knowledge and excellence starts here.</p>
+                        <button id="exploreBtn" class="cta-button">Explore Courses</button>
+                    </div>
+                </div>
+
+                <div class="features">
+                    <div class="feature-card">
+                        <i class="fas fa-book-open feature-icon"></i>
+                        <h3>Interactive Learning</h3>
+                        <p>Engage with our interactive content designed to enhance your learning experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-certificate feature-icon"></i>
+                        <h3>Certification</h3>
+                        <p>Earn certificates that validate your skills and knowledge in various domains.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users feature-icon"></i>
+                        <h3>Community</h3>
+                        <p>Join our community of learners and educators to collaborate and grow together.</p>
+                    </div>
+                </div>
+
+                <div class="quote-section">
+                    <h2>Daily Inspiration</h2>
+                    <div class="quote-container">
+                        <blockquote id="quoteText">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</blockquote>
+                        <cite id="quoteAuthor">- Malcolm X</cite>
+                        <button id="newQuoteBtn">New Quote</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="coursesSection" class="hidden-section">
+                <h2 class="section-title">Our Courses</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-image" style="background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=400');"></div>
+                        <div class="course-content">
+                            <h3>Web Development Fundamentals</h3>
+                            <p>Learn the basics of HTML, CSS, and JavaScript to build interactive websites.</p>
+                            <p class="course-info"><span class="course-duration"><i class="fas fa-clock"></i> 8 weeks</span> <span class="course-level"><i class="fas fa-signal"></i> Beginner</span></p>
+                            <button class="enroll-btn">Enroll Now</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image" style="background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=400');"></div>
+                        <div class="course-content">
+                            <h3>Data Science Essentials</h3>
+                            <p>Master the tools and techniques for data analysis and visualization.</p>
+                            <p class="course-info"><span class="course-duration"><i class="fas fa-clock"></i> 10 weeks</span> <span class="course-level"><i class="fas fa-signal"></i> Intermediate</span></p>
+                            <button class="enroll-btn">Enroll Now</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=400');"></div>
+                        <div class="course-content">
+                            <h3>Cybersecurity Foundations</h3>
+                            <p>Explore the principles of network security and threat prevention.</p>
+                            <p class="course-info"><span class="course-duration"><i class="fas fa-clock"></i> 12 weeks</span> <span class="course-level"><i class="fas fa-signal"></i> Advanced</span></p>
+                            <button class="enroll-btn">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="quizSection" class="hidden-section">
+                <h2 class="section-title">Knowledge Quiz</h2>
+                <div class="quiz-container">
+                    <div id="questionContainer">
+                        <h3 id="questionText">Loading question...</h3>
+                        <div id="optionsContainer"></div>
+                    </div>
+                    <div class="quiz-controls">
+                        <button id="prevBtn" disabled>Previous</button>
+                        <div class="progress-container">
+                            <div id="progressBar"></div>
+                        </div>
+                        <button id="nextBtn">Next</button>
+                        <button id="submitBtn" class="hidden">Submit</button>
+                    </div>
+                </div>
+
+                <div id="resultsContainer" class="hidden">
+                    <h2>Quiz Results</h2>
+                    <div class="score-display">
+                        <div class="score-circle">
+                            <span id="scoreDisplay">0</span>/5
+                        </div>
+                        <p class="score-message" id="scoreMessage">Keep practicing!</p>
+                    </div>
+                    <div id="reviewContainer"></div>
+                    <button id="retakeBtn">Retake Quiz</button>
+                </div>
+            </section>
+
+            <section id="resourcesSection" class="hidden-section">
+                <h2 class="section-title">Learning Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <i class="fas fa-file-pdf resource-icon"></i>
+                        <h3>Free NOTE-books</h3>
+                        <p>Download our collection of free educational NOTE-books covering various subjects.</p>
+                        <a href="#" class="resource-link">Browse Library</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-video resource-icon"></i>
+                        <h3>Video Tutorials</h3>
+                        <p>Access hundreds of instructional videos created by industry experts.</p>
+                        <a href="#" class="resource-link">Watch Now</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-chalkboard-teacher resource-icon"></i>
+                        <h3>PREMIEUM STAFF</h3>
+                        <p>Join our upcoming live webinars and interact with instructors in real-time.</p>
+                        <a href="#" class="resource-link">Register</a>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-laptop-code resource-icon"></i>
+                        <h3>Practice Projects</h3>
+                        <p>Apply your knowledge with our curated list of hands-on projects and exercises.</p>
+                        <a href="#" class="resource-link">Start Practicing</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>SAFE SKILL AND EDUCATIONAL Academy is dedicated to providing quality education and skill development opportunities for learners worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Courses</a></li>
+                        <li><a href="#" class="footer-link">Quiz</a></li>
+                        <li><a href="#" class="footer-link">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> sadiqferej397@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +2 (519) 530-09765</p>
+                    <div class="social-links">
+                        <a href="https://:t.me/@safe190" target="_blank" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.tiktok.com/@sadiqferej?_t=ZM-8vVGpg6coli&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/sadiqferej?utm_source=qr&igsh=MXB6N2h5bWdhMXdiag==" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sadiq-ferej" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SAFE SKILL AND EDUCATIONAL Academy. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+</body>
+</html>
